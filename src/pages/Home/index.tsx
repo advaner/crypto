@@ -9,23 +9,23 @@ const Home: React.FC = () => {
 
     const [crypto, setCrypto] = useState()
 
-    useEffect(() => {
-        const response = axios.get("https://investing-cryptocurrency-markets.p.rapidapi.com/coins/list", {
-            headers: {
-                'X-RapidAPI-Host': 'investing-cryptocurrency-markets.p.rapidapi.com',
-                'X-RapidAPI-Key': 'e2a99c8790msh90aed4d017ed0b2p129056jsna141f90f1eda'
-            },
-            params: {
-                edition_currency_id: '12',
-                time_utc_offset: '28800',
-                lang_ID: '1',
-                sort: 'MARKETCAP_DN',
-                page: '1'
-            }
-        }).then(response => {
-            console.log(response.data.data[0].screen_data.crypto_data)
-        })
-    }, [])
+    // useEffect(() => {
+    //     const response = axios.get("https://investing-cryptocurrency-markets.p.rapidapi.com/coins/list", {
+    //         headers: {
+    //             'X-RapidAPI-Host': 'investing-cryptocurrency-markets.p.rapidapi.com',
+    //             'X-RapidAPI-Key': 'e2a99c8790msh90aed4d017ed0b2p129056jsna141f90f1eda'
+    //         },
+    //         params: {
+    //             edition_currency_id: '12',
+    //             time_utc_offset: '28800',
+    //             lang_ID: '1',
+    //             sort: 'MARKETCAP_DN',
+    //             page: '1'
+    //         }
+    //     }).then(response => {
+    //         console.log(response.data.data[0].screen_data.crypto_data)
+    //     })
+    // }, [])
 
 
 
@@ -37,7 +37,7 @@ const Home: React.FC = () => {
             </div>
             <div id="content">
                 <div>
-
+                    <p>Teste</p>
                 </div>
             </div>
         </Container>
